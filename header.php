@@ -1,11 +1,3 @@
-<?php
-    session_start();
-    if (!isset($_SESSION['admin'])) {
-        # code...
-        header('Location:login.php');
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,29 +8,23 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/lgscreen.css">
-    <link rel="stylesheet" href="css/warn.css">
     <link rel="stylesheet" href="css/smscreen.css">
 </head>
 <body>
     <header>
-        <div class="alert-box alert-success">Welcome Back</div>
         <div class="header_wrapper">
             <div class="header_logo">
                 ADMIN
             </div>
             <nav>
                 <ul>
-                    <li><a href="../">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="">BTC</a></li>
                     <li><a href="">All News</a></li>
                     <li><a href="">Coins</a></li>
-                    <li><a href="../inc/logout.inc.php">Logout</a></li>
                 </ul>
             </nav>
         </div>
         
     </header>
-    <main></main>
-    
-</body>
-</html>
+    <main>

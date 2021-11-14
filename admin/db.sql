@@ -10,7 +10,6 @@ CREATE TABLE admins (
     ADMIN_ID int(11) PRIMARY KEY AUTO_INCREMENT,
     userName varchar(123) NOT NULL,
     Password varchar(123) NOT NULL,
-    Descriptions varchar(255) NOT NULL,
     LastLoginDate DATETIME NULL DEFAULT CURRENT_TIMESTAMP
 
 );
@@ -18,8 +17,11 @@ CREATE TABLE posts (
     POST_ID int(11) PRIMARY KEY AUTO_INCREMENT,
     title varchar(500) NOT NULL,
     Descriptions TEXT NOT NULL,
+    Image varchar(900) NOT NULL,
     tags varchar(500) NOT NULL,
     ADMIN_ID varchar(255) NOT NULL,
     DateUpload DATETIME NULL DEFAULT CURRENT_TIMESTAMP
 
 );
+
+INSERT INTO `admins` (`ADMIN_ID`, `userName`, `Password`, `Descriptions`, `LastLoginDate`) VALUES (NULL, 'ADMIN', '', '', current_timestamp());
