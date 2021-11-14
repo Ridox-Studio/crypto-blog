@@ -3,7 +3,7 @@
 $servername = "localhost";
 $dBUsername = "root";
 $dBPassword = "";
-$dBName = "fashion";
+$dBName = "cryptolistmining";
 
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 
