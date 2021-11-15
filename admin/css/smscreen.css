@@ -35,4 +35,24 @@
         color: #000;
     }
 
+    .main-wrapper{
+        flex-direction: column;
+        height: 200vh;
+        
+    }
+
+    .main-wrapper .room {
+        flex-basis: 50%;
+        flex-shrink: 0;
+        height: 100vh;
+    }
+    .room2{
+        border-top: solid 2px #707070;
+
+    }
+
+    .room1 form{
+        width: 100%;
+    }
+
 }

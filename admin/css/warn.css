@@ -80,6 +80,7 @@
     padding:4px 7px;
     color:rgb(255, 255, 255);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 100;
 }.alert-box::after{
     content: "";
     animation: timeEffect 5s;

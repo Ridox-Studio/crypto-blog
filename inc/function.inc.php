@@ -58,3 +58,32 @@ function login($conn, $userName, $pwd){
 
     }
 }
+
+function uploadtodb($conn, $Title, $Descreption, $Image, $postedBy){
+    if (!userExist($conn, $postedBy)) {
+    # code...
+    // echo '<div class="alert-box alert-warn">user dont exist</div>';
+    // header('Location:../admin/login.php?error=wronglogin');
+    return false;
+    // exit();
+
+    }
+    else {
+        $sql = "INSERT INTO `posts` (`title`, `Descriptions`, `Images`, `ADMIN_ID`) VALUES (?, ?, ?, ?)";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            // header("location:../admin/login.php?error=stmtfailed");
+                return false;
+            // echo '<div class="alert-box alert-warn">An </div>';
+
+            // exit();
+        }
+
+        mysqli_stmt_bind_param($stmt, "ssss", $Title, $Descreption, $Image, $postedBy);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        return true;
+
+    }
+
+}

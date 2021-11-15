@@ -28,8 +28,12 @@
                     break;
                     case 'wronglogin':
                     echo '<div class="alert-box alert-danger">User Not found</div>';
-                        # code...
-                        break;
+                    # code...
+                    break;
+                    case 'emptyinput':
+                        echo '<div class="alert-box alert-warn">fill in all input</div>';
+                            # code...
+                            break;
                 
                 default:
                     # code...

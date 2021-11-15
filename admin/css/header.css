@@ -1,4 +1,4 @@
-::root {
+:root {
     --main-theme: #FF5B51;
 }
 
@@ -24,7 +24,7 @@ header {
     background: #000;
     display: flex;
     justify-content:center;
-
+    z-index: 9;
 }
 
 header .header_logo{
