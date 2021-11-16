@@ -135,6 +135,7 @@
                         // console.log(jsonData.results[0].urls.regular);
                         // this is the jsonDAta 
                         // to get random image(number)
+                        // This is The json fetch
                         let rand = Math.floor((Math.random() * jsonData.results.length) + 1);
                         console.log(rand);
                         console.log(jsonData.results);
