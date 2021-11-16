@@ -79,26 +79,6 @@
             </div>
         </section>
     </main>
-    <script>
-    $(document).ready(function() {
-            var searchcount = 10;
-            $(".form_").submit(function(event) {
-                event.preventDefault();
-                var Title = $("#Title").val();
-                var Descreption = $("#Descreption").val();
-                var image = "hi";
-                var submit = "100";
-                var postedBy = "<?php echo $_SESSION['admin']; ?>";
-                $(".errormsg").load("../inc/post.inc.php", {
-                    Title:Title,
-                    Descreption:Descreption,
-                    image:image,
-                    submit:submit,
-                    
-                });
-            });
-        });
-</script>
     <div class="errormsg">
             <?php
             if (isset($_GET['error'])) {
@@ -134,6 +114,65 @@
             }
             ?>
         </div>
+    <script>
+    $(document).ready(function() {
+            var searchcount;
+
+            $(".form_").submit(function(event) {
+                event.preventDefault();
+                var Title = $("#Title").val();
+                var image = "";
+
+                let clientId = "opldphTvzfpI_DK8LnPuxO2SdjSeA-nqVG_TUrgpOmc";
+                let endpoint = `https://api.unsplash.com/search/photos/?client_id=${clientId}`;
+                endpoint = `https://api.unsplash.com/search/photos?page=1&query=${Title}&client_id=${clientId}`;
+                console.log(endpoint);
+                fetch(endpoint)
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (jsonData) {
+                        // console.log(jsonData.results[0].urls.regular);
+                        // this is the jsonDAta 
+                        // to get random image(number)
+                        let rand = Math.floor((Math.random() * jsonData.results.length) + 1);
+                        console.log(rand);
+                        console.log(jsonData.results);
+                        if (jsonData.results.length == 0) {
+                            image = "";
+                            document.querySelector(".alert-box").innerHTML="An error occur with Image to be Loaded. you can try adjusting the blog title";
+                            $(".alert-box").removeClass("alert-success");
+                            $(".alert-box").addClass("alert-warn");
+                            document.querySelector(".alert-box").style = "visibility:visible;";
+                            setTimeout(() => {
+                            document.querySelector(".alert-box").style = "visibility:hidden;";
+                                
+                            }, 3000);
+
+                        }
+                        else{
+                            image = jsonData.results[rand].urls.regular;
+
+                        }
+                        // console.log(jsonData.results[rand].urls.regular);
+                        var Descreption = $("#Descreption").val();
+                        // console.log("image:::::: "+image);
+                        var submit = "100";
+                        var postedBy = "<?php echo $_SESSION['admin']; ?>";
+                        $(".errormsg").load("../inc/post.inc.php", {
+                        Title:Title,
+                        Descreption:Descreption,
+                        image:image,
+                        submit:submit,
+                    
+                });
+
+                    })
+                
+            });
+        });
+</script>
+    
     
 </body>
 

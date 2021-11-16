@@ -20,6 +20,14 @@ require_once "function.inc.php";
 // echo "encrypted";
 
 $NotEmpty = false;
+if (empty($Image)) {
+        echo '<div class="alert-box alert-warn">Random Image Fail to load</div>';
+        exit();
+        // $NotEmpty = true;
+        
+
+      
+}
 foreach ($_POST as $key) {
     # code...
     if (empty($key)) {
