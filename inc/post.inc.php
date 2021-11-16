@@ -45,7 +45,7 @@ foreach ($_POST as $key) {
 if (uploadtodb($conn, $Title, $Descreption, $Image, $postedBy)) {
     # code..
 
-    echo '<div class="alert-box alert-success">This has been added to your blog</div>';
+    echo '<div class="alert-box alert-success">Success Your blog has been updated successfully</div>';
     echo '<script type="text/javascript"> 
             document.querySelectorAll("input").forEach(element => {
                 element.value = "";

@@ -115,6 +115,29 @@
             ?>
         </div>
     <script>
+        function checkStaus(){
+            if (window.navigator.onLine === false) {
+                            document.querySelector(".alert-box").innerHTML="Check Ur Internet Connection";
+                            $(".alert-box").removeClass("alert-success");
+                            $(".alert-box").addClass("alert-warn");
+                            document.querySelector(".alert-box").style = "visibility:visible;";
+                            setTimeout(() => {
+                            document.querySelector(".alert-box").style = "visibility:hidden;";
+                                
+                            }, 3000);
+            }
+            else{
+                document.querySelector(".alert-box").innerHTML="Checking for Image";
+                            $(".alert-box").removeClass("alert-warn");
+                            $(".alert-box").addClass("alert-success");
+                            document.querySelector(".alert-box").style = "visibility:visible;";
+                            setTimeout(() => {
+                            document.querySelector(".alert-box").style = "visibility:hidden;";
+                                
+                            }, 3000);
+            }
+            
+        }
     $(document).ready(function() {
             var searchcount;
 
@@ -127,6 +150,8 @@
                 let endpoint = `https://api.unsplash.com/search/photos/?client_id=${clientId}`;
                 endpoint = `https://api.unsplash.com/search/photos?page=1&query=${Title}&client_id=${clientId}`;
                 console.log(endpoint);
+                console.log(window.navigator.onLine);
+                checkStaus();
                 fetch(endpoint)
                     .then(function (response) {
                         return response.json();
@@ -136,7 +161,7 @@
                         // this is the jsonDAta 
                         // to get random image(number)
                         // This is The json fetch
-                        let rand = Math.floor((Math.random() * jsonData.results.length) + 1);
+                        let rand = Math.floor((Math.random() * jsonData.results.length));
                         console.log(rand);
                         console.log(jsonData.results);
                         if (jsonData.results.length == 0) {
