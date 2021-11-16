@@ -71,7 +71,7 @@
 }
 .alert-box{
     animation: fadeOut 5s;
-    position: absolute;
+    position: fixed;
     text-align: center;
     visibility: hidden;
     /* display: inline-block; */

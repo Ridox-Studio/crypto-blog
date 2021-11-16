@@ -1,7 +1,9 @@
 <?php
-
-    // require "../inc/dbh.inc.php";
-    
+    session_start();
+    if (isset($_SESSION['admin'])) {
+        # code...
+        header('Location:index.php');
+    }
 ?>
 
 <!DOCTYPE html>
