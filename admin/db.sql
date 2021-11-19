@@ -9,7 +9,7 @@
 CREATE TABLE admins (
     ADMIN_ID int(11) PRIMARY KEY AUTO_INCREMENT,
     userName varchar(123) NOT NULL,
-    Password varchar(123) NOT NULL,
+    Password varchar(623) NOT NULL,
     LastLoginDate DATETIME NULL DEFAULT CURRENT_TIMESTAMP
 
 );
@@ -24,12 +24,7 @@ CREATE TABLE posts (
 
 );
 
-INSERT INTO `admins` (`ADMIN_ID`, `userName`, `Password`, `Descriptions`, `LastLoginDate`) VALUES (NULL, 'ADMIN', '', '', current_timestamp());
-
-
-
-
-
+INSERT INTO `admins` (`ADMIN_ID`, `userName`, `Password`, `LastLoginDate`) VALUES (NULL, 'ADMIN', '$2y$10$IueKGEgU1jZT7k3S30ziHuIB1P4oXKHBEot8xJC7nfXl/YMFqIZeO', current_timestamp());
 
 
 

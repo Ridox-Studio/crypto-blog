@@ -163,6 +163,33 @@
             ?>
         </div>
     <script>
+        function reloadPost(){
+            //  postid = thi.dataset.me;
+
+            // console.log(postid);
+            // $(document).ready(function() {
+            // var searchcount = 10;
+            $(document).ready(function() {
+             
+                
+                // console.log(postid);
+            //     event.preventDefault();
+            //     var busname = $("#busname").val();
+            //     var fullname = $("#fullname").val();
+            //     var state = $("#state").val();
+            //     var email = $("#email").val();
+            //     var phone = $("#phone").val();
+            //     var submit = $("#savePro").val();
+            //     
+            postid = 0;
+                $(".all_post_main").load("../inc/reload.inc.php", {
+                    postid:postid
+                });
+            
+           
+        });
+
+        }
         var postid = "";
         // document.querySelector(".delete").dataset.me
         function deleteMe(thi){
@@ -267,7 +294,11 @@
                         submit:submit,
                     
                 });
-
+                setTimeout(() => {
+                    reloadPost();
+                    
+                }, 800);
+                console.log("done");
                     })
                 
             });
@@ -314,6 +345,8 @@
             }
             
         })
+
+
 </script>
     
     

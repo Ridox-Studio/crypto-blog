@@ -1,0 +1,224 @@
+:root {
+    /* COLOR */
+
+    --main-color: #ff5b51;
+    --black-color: #0D0D0F;
+    --white-color: #E6E6E6;
+    --market-up: #5EDF46;
+    --overlay-back: linear-gradient(var(--main-color), rgba(85, 85, 85, 0.39));
+
+    /* FONT-SIZE */
+    --fs-s: ;
+    --fs-xs: 12px;
+    --fs-m: 1rem;
+    --fs-l: 2rem;
+    --fs-xl: 2.3rem;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    padding-top: 80px;
+    position: relative;
+    background: var(--black-color);
+    color: var(--white-color);
+}
+
+/* LANDING PAGE /////////////////////////////////////////////////////*/
+header {
+    background: var(--black-color);
+    color: var(--white-color);
+    height: 90vh;
+    z-index: 100;
+}
+
+.title-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* padding: 0 20px; */
+    height: max-content;
+    padding: 20px 20px 30px 20px;
+
+}
+
+.title-header>div {
+    /* border: black 1px solid; */
+    width: 350px;
+}
+
+.title-headlines-wrapper {
+    width: fit-content;
+    text-align: center;
+}
+
+.title-headlines-wrapper p {
+    font-weight: bolder;
+}
+
+.title-headlines-wrapper h3 {
+    margin-bottom: 10px;
+}
+
+.title-heading {
+    font-size: var(--fs-l);
+    flex-shrink: 0;
+    flex-basis: 34%;
+
+}
+
+.title-heading span {
+    color: var(--main-color);
+}
+
+.title-coins-stats {
+    display: flex;
+    flex-direction: row;
+}
+
+.title-headlines {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 32%;
+    align-items: flex-end;
+}
+
+.title-headlines>h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: var(--fs-m);
+    text-align: center;
+}
+
+.title-headline-box {
+    border: solid 1px black;
+    padding: 10px 20px;
+    width: 268px;
+    align-self: end;
+    height: max-content;
+    font-size: var(--fs-xs);
+    text-decoration: underline;
+    text-transform: uppercase;
+    background: var(--main-color);
+    color: var(--black-color);
+    line-height: 1.6;
+}
+
+.title-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 32%;
+}
+
+.title-description>div {
+    font-size: var(--fs-xs);
+    width: 80%;
+    line-height: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.header-slider {
+    height: 100%;
+}
+
+.header-slider>marquee {
+    height: 20px;
+    /* border: white 1px solid; */
+    height: 32vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.header-slider .news_box {
+    width: 300px;
+    height: 30vh;
+    background: var(--main-color);
+    display: inline-block;
+    margin: 0px 10px;
+    position: relative;
+
+
+}
+
+.header-slider marquee .news_box_wrapper {
+    width: 100%;
+    height: 100%;
+    background: var(--market-up);
+    display: flex;
+}
+
+.header-slider marquee img.back_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header-slider marquee .img_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-back);
+}
+
+.header-slider .news_box_wrapper .news_title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    /* background: wheat; */
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header-slider .news_box_wrapper .news_title_body {
+    width: 85%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-slider marquee .news_title_body .title_ {
+    flex-basis: 70%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.header-slider marquee .news_title_body .date_ {
+    flex-basis: 30%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    font-size: var(--fs-xs);
+    text-align: left;
+    justify-content: flex-start;
+}
