@@ -1,0 +1,58 @@
+@media screen and (max-width:514px) {
+    
+    header nav{
+        position:fixed;
+        z-index: 10;
+        background:var(--main-theme);
+        background:#FF5B51;
+        height:100vh;
+        /* max-width:60vw; */
+        width: 60vw;
+        top:0;
+        right:0;
+        box-sizing: border-box;
+        
+        
+    }
+    header nav ul{
+        position: absolute;
+        flex-direction: column;
+        height: 40%;
+        top: 15vh;
+        align-items: flex-start;
+        padding: 0px 40px;
+
+    }
+
+    .header_wrapper::after {
+        position: absolute;
+        content: "";
+        visibility: hidden;
+    }
+
+    nav li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .main-wrapper{
+        flex-direction: column;
+        height: 200vh;
+        
+    }
+
+    .main-wrapper .room {
+        flex-basis: 50%;
+        flex-shrink: 0;
+        height: 100vh;
+    }
+    .room2{
+        border-top: solid 2px #707070;
+
+    }
+
+    .room1 form{
+        width: 100%;
+    }
+
+}
