@@ -115,7 +115,7 @@
                             elseif ($resultcheck == 0) {
                               echo '<article class="article_post">
                                         NO POST AVALIABLE
-                                        <a href="#" class="delete" data-me="he">REFRESH</a>
+                                        <a href="" class="delete" data-me="he">REFRESH</a>
                                     </article>';
                             }
                      ?>

@@ -11,6 +11,7 @@
         top:0;
         right:0;
         box-sizing: border-box;
+        visibility: hidden;
         
         
     }
@@ -35,4 +36,18 @@
         color: #000;
     }
 
+    .title-headlines, .title-description {
+        display: none;
+    }
+
+    .title-heading {
+        flex-basis: 100%;
+        padding: 20px 40px 10px 40px;
+        font-size: var(--fs-xl);
+        line-height: 1.3;
+    }
+
+    nav ul::after{
+        display: none;
+    }
 }
