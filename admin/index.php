@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/smscreen.css">
     <script src="../scripts/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body onload="manageLoadTrigger()">
     <header>
         
         <div class="header_wrapper">
@@ -274,6 +274,46 @@
 
            
         });
+        // document.querySelector("body").addEventListener("load", function(){
+        //     console.log("Loaded");
+        //     if (window.innerWidth <= 514) {
+        //         let nav = document.querySelector("nav");
+        //         nav.style.visibility = "hidden";
+        //     }
+        // })
+        function manageLoadTrigger(){
+            if (window.innerWidth <= 514) {
+                let nav = document.querySelector("nav");
+                nav.style.visibility = "hidden";
+            }
+            else{
+                let nav = document.querySelector("nav");
+                nav.style.visibility = "visible";
+
+            }
+        }
+
+        document.querySelector("main").addEventListener("click", function(){
+            if (window.innerWidth <= 514) {
+                let nav = document.querySelector("nav");
+                nav.style.visibility = "hidden";
+            }
+            else{
+                let nav = document.querySelector("nav");
+                nav.style.visibility = "visible";
+
+            }
+            
+            
+            
+        })
+        document.querySelector("nav").addEventListener("click", function(){
+            if (window.innerWidth <= 514) {
+                let nav = document.querySelector("nav");
+                nav.style.visibility = "visible";
+            }
+            
+        })
 </script>
     
     
