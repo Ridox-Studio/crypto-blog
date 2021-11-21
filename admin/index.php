@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/smscreen.css">
     <script src="../scripts/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body onload="manageLoadTrigger()">
     <header>
         
         <div class="header_wrapper">
@@ -115,7 +115,7 @@
                             elseif ($resultcheck == 0) {
                               echo '<article class="article_post">
                                         NO POST AVALIABLE
-                                        <a href="" class="delete" data-me="he">REFRESH</a>
+                                        <a href="#" class="delete" data-me="he">REFRESH</a>
                                     </article>';
                             }
                      ?>
@@ -163,6 +163,33 @@
             ?>
         </div>
     <script>
+        function reloadPost(){
+            //  postid = thi.dataset.me;
+
+            // console.log(postid);
+            // $(document).ready(function() {
+            // var searchcount = 10;
+            $(document).ready(function() {
+             
+                
+                // console.log(postid);
+            //     event.preventDefault();
+            //     var busname = $("#busname").val();
+            //     var fullname = $("#fullname").val();
+            //     var state = $("#state").val();
+            //     var email = $("#email").val();
+            //     var phone = $("#phone").val();
+            //     var submit = $("#savePro").val();
+            //     
+            postid = 0;
+                $(".all_post_main").load("../inc/reload.inc.php", {
+                    postid:postid
+                });
+            
+           
+        });
+
+        }
         var postid = "";
         // document.querySelector(".delete").dataset.me
         function deleteMe(thi){
@@ -267,13 +294,59 @@
                         submit:submit,
                     
                 });
-
+                setTimeout(() => {
+                    reloadPost();
+                    
+                }, 800);
+                console.log("done");
                     })
                 
             });
 
            
         });
+        // document.querySelector("body").addEventListener("load", function(){
+        //     console.log("Loaded");
+        //     if (window.innerWidth <= 514) {
+        //         let nav = document.querySelector("nav");
+        //         nav.style.visibility = "hidden";
+        //     }
+        // })
+        function manageLoadTrigger(){
+            if (window.innerWidth <= 514) {
+                let nav = document.querySelector("nav");
+                nav.style.visibility = "hidden";
+            }
+            else{
+                let nav = document.querySelector("nav");
+                nav.style.visibility = "visible";
+
+            }
+        }
+
+        document.querySelector("main").addEventListener("click", function(){
+            if (window.innerWidth <= 514) {
+                let nav = document.querySelector("nav");
+                nav.style.visibility = "hidden";
+            }
+            else{
+                let nav = document.querySelector("nav");
+                nav.style.visibility = "visible";
+
+            }
+            
+            
+            
+        })
+        document.querySelector("nav").addEventListener("click", function(){
+            if (window.innerWidth <= 514) {
+                let nav = document.querySelector("nav");
+                nav.style.visibility = "visible";
+            }
+            
+        })
+
+
 </script>
     
     

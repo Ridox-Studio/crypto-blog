@@ -31,8 +31,3 @@ INSERT INTO `admins` (`ADMIN_ID`, `userName`, `Password`, `LastLoginDate`) VALUE
 
 
 
-
-
-
-
-

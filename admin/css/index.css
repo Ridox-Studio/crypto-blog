@@ -1,10 +1,10 @@
-main{
+main {
     padding-top: 85px;
 
 }
 
 .main-wrapper {
-    width:100%;
+    width: 100%;
     display: flex;
     background: #000;
 
@@ -12,8 +12,8 @@ main{
 
 .main-wrapper .room {
     flex-basis: 50%;
-    height:calc(100vh - 85px);
-    display:flex;
+    height: calc(100vh - 85px);
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -22,32 +22,35 @@ main{
 .room .room_wrapper {
     width: 100%;
 }
-.room1 .room_wrapper{
+
+.room1 .room_wrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-.room2 .room_wrapper{
+
+.room2 .room_wrapper {
     height: 90%;
 }
+
 .room1 .room_header {
     width: 100%;
     flex-basis: 25%;
-    color:#fff;
+    color: #fff;
     align-items: center;
     box-sizing: border-box;
     padding-left: 8%;
     padding-top: 9%;
 }
 
-.room1 .room_main{
+.room1 .room_main {
     width: 100%;
     display: flex;
     flex-basis: 75%;
     flex-direction: column;
 }
 
-.room1 .room_sub_header{
+.room1 .room_sub_header {
     width: 100%;
     flex-basis: 20%;
     display: flex;
@@ -57,24 +60,25 @@ main{
     color: #fff;
     font-size: 2rem;
 }
-.room1 .room_form{
+
+.room1 .room_form {
     flex-basis: 80%;
     width: 100%;
     /* text-align: center; */
     display: flex;
     /* justify-content: center; */
     box-sizing: border-box;
-    padding-left:2%;
+    padding-left: 2%;
 
 }
 
-.room1 form{
+.room1 form {
     width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
     /* justify-content:center; */
-    align-items:center;
+    align-items: center;
 
 }
 
@@ -88,40 +92,44 @@ main{
     /* justify-content: space-evenly; */
     /* align-items: center; */
     box-sizing: border-box;
-    padding:0px 8%;
+    padding: 0px 8%;
 
 
 }
+
 .room_wrapper .textarea {
     flex-basis: 54%;
 }
+
 .textarea label {
-    flex-basis:20%;
+    flex-basis: 20%;
 }
-.room1 form textarea{
+
+.room1 form textarea {
     resize: none;
     flex-basis: 80%;
 
-    
-}
-form label{
-    flex-basis:30%;
+
 }
 
-.input_wrapper input{
+form label {
+    flex-basis: 30%;
+}
+
+.input_wrapper input {
     flex-basis: 55%;
 
 }
 
-.room1 .no_entery{
-    flex-basis:20%;
+.room1 .no_entery {
+    flex-basis: 20%;
     display: grid;
     place-items: center;
 
 }
 
-.no_entery button{
-    height:70%;
+.no_entery button {
+    height: 70%;
     width: 100%;
     outline: none;
     border: none;
@@ -130,47 +138,48 @@ form label{
 
 /* TO STYLE WHERE ALL THE POST IS GONNA BE */
 
-.all_post{
+.all_post {
     display: flex;
     flex-direction: column;
-    
+
 
 }
 
-.all_post h1{
-    color:#fff;
+.all_post h1 {
+    color: #fff;
 }
 
-.all_post  div.all_post{
+.all_post div.all_post {
     width: 100%;
     height: 100%;
 }
-.all_post .all_post_header{
+
+.all_post .all_post_header {
     flex-basis: 25%;
     box-sizing: border-box;
     padding: 4% 8%;
 
 }
 
-.all_post .all_post_main{
-    flex-basis:75%;
-    display:flex;
+.all_post .all_post_main {
+    flex-basis: 75%;
+    display: flex;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    flex-direction:column;
+    flex-direction: column;
     padding: 2%;
     box-sizing: border-box;
     /* justify-content: space-around; */
     align-items: center;
 }
 
-.all_post_main .article_post{
+.all_post_main .article_post {
     margin: 10px 0;
     width: 80%;
     flex-basis: 100px;
     flex-shrink: 0;
-    background:var(--main-theme);
-    padding:6% 2%;
+    background: var(--main-theme);
+    padding: 6% 2%;
     box-sizing: border-box;
     overflow: hidden;
     overflow-anchor: scroll;
@@ -178,7 +187,7 @@ form label{
     position: relative;
 }
 
-.article_post .delete{
+.article_post .delete {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -189,8 +198,8 @@ form label{
     text-transform: uppercase;
     text-align: center;
     padding: 3px 6px;
-    color:#fff;
-    display:inline-block;
+    color: #fff;
+    display: inline-block;
     outline: none;
     border: none;
 

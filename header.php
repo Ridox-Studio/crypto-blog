@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/lgscreen.css">
     <link rel="stylesheet" href="css/smscreen.css">
 </head>
-<body>
+<body onload="manageLoadTrigger()">
     <header>
         <div class="header_wrapper">
             <div class="header_logo">
