@@ -20,9 +20,8 @@
             <nav>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="">BTC</a></li>
-                    <li><a href="">All News</a></li>
-                    <li><a href="">Coins</a></li>
+                    <li><a href="allnews.php">All News</a></li>
+                    <li><a href="coins.php">Coins</a></li>
                 </ul>
             </nav>
         </div>

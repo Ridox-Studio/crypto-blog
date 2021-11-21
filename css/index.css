@@ -134,9 +134,9 @@ header{
     box-sizing: border-box;
 }
 
-.header-slider .news_box{
+.news_box{
     width: 300px;
-    height: 30vh;
+    height: 195px;
     background: var(--main-color);
     display: inline-block;
     margin: 0px 10px;
@@ -144,13 +144,13 @@ header{
 
 
 }
-.header-slider marquee .news_box_wrapper{
+.news_box_wrapper{
     width: 100%;
     height: 100%;
     background: var(--market-up);
     display: flex;
 }
-.header-slider marquee img.back_img{
+img.back_img{
     position: absolute;
     top: 0;
     left: 0;
@@ -158,7 +158,7 @@ header{
     height: 100%;
 }
 
-.header-slider marquee .img_overlay{
+.img_overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -167,7 +167,7 @@ header{
     background: var(--overlay-back);
 }
 
-.header-slider .news_box_wrapper .news_title{
+.news_title{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -180,7 +180,7 @@ header{
     
 }
 
-.header-slider .news_box_wrapper .news_title_body{
+.news_title_body{
     width: 85%;
     height: 100%;
     color: #fff;
@@ -189,13 +189,13 @@ header{
     justify-content: center;
     align-items: center;
 }
-.header-slider marquee .news_title_body .title_ {
+.title_ {
     flex-basis: 70%;
     width: 100%;
     display: flex;
     align-items: flex-end;
 }
-.header-slider marquee .news_title_body .date_ {
+.date_ {
     flex-basis: 30%;
     width: 100%;
     display: flex;
@@ -203,4 +203,63 @@ header{
     font-size: var(--fs-xs);
     text-align: left;
     justify-content: flex-start;
+}
+
+/* ALL NEWS PAGE /////////////////////////////////////// */
+
+.allnews-header-wrapper{
+}
+.allnews-header{
+    height: 400px;
+    position: relative;
+}
+.allnews-header-heading{
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    color: var(--black-color);
+    height: 253px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.allnews-header-img{
+    position: absolute;
+    right: 36px;
+    bottom: 54px;
+    margin: 0!important;
+}
+.allnews-header-headline-title{
+    font-size: var(--fs-l);
+    width: 43%;
+}
+.allnews-header-headline-date{
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+}
+.allnews-header-headline-description{
+    font-size: var(--fs-s);
+    width: 43%;
+}
+.allnews-grid-wrapper{
+    display: flex;
+    justify-content: space-around;
+
+}
+.allnews-header-wrapper-small-screen{
+    display: none;
+}
+.news-body{
+    line-height: 32px; 
+    width: 80%;
+}
+
+/* COINS PAGE ///////////////////////// */
+
+.coins-wrapper table{
+    width: 100%;
+}
+.coins-wrapper tr{
+    text-align: center;
+    height: 66px;
 }
